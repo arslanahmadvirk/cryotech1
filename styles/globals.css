@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -104,4 +108,219 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.colored-circle {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* input[type=range]{
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 3px;
+  background: green;
+  border: none;
+  border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: white;
+  margin-top: -5px;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+    color: #13bba4;
+} */
+
+
+/* @media screen and (-webkit-min-device-pixel-ratio:0) {
+  input[type='range'] {
+    overflow: hidden;
+    -webkit-appearance: none;
+    background-color: #9a905d;
+  }
+  
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: #13bba4;
+    margin-top: -1px;
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    background: #ffffff;
+    box-shadow: -80px 0 0 80px #43e5f7;
+  }
+
+} */
+
+
+
+
+input[type="range"].range1 {
+	font-size: 1.5rem;
+  margin-top: 0.2em;
+	
+}
+
+input[type="range"].range1 {
+	color: #ef233c;
+	--thumb-height: 0.7em;
+	--track-height: 0.125em;
+	--track-color: rgb(137, 137, 137);
+	--brightness-hover: 180%;
+	--brightness-down: 80%;
+	--clip-edges: 0.125em;
+  --track-color: rgb(72, 169, 72);
+
+}
+
+
+/* === range commons === */
+input[type="range"].range1 {
+	position: relative;
+	background: rgb(72, 169, 72);
+
+  
+}
+
+
+/* === WebKit specific styles === */
+
+input[type="range"].range1::-webkit-slider-runnable-track{	overflow: hidden;}
+input[type="range"].range1::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	transition: all ease 100ms;
+	height: var(--thumb-height);
+  
+}
+
+input[type="range"].range1::-webkit-slider-runnable-track,
+input[type="range"].range1::-webkit-slider-thumb {
+	position: relative;
+ 
+}
+
+input[type="range"].range1::-webkit-slider-thumb {
+	--thumb-radius: calc((var(--thumb-height) * 0.5) - 1px);
+	--clip-top: calc((var(--thumb-height) - var(--track-height)) * 0.5 - 0.5px);
+	--clip-bottom: calc(var(--thumb-height) - var(--clip-top));
+	--clip-further: calc(100% + 1px);
+	--box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0
+		100vmax currentColor;
+
+	width: var(--thumb-width, var(--thumb-height));
+	
+	background-color:white;
+  color: rgb(137, 137, 137);
+	box-shadow: var(--box-fill);
+	border-radius: var(--thumb-width, var(--thumb-height));
+
+	filter: brightness(100%);
+	clip-path: polygon(
+		100% -1px,
+		var(--clip-edges) -1px,
+		0 var(--clip-top),
+		-100vmax var(--clip-top),
+		-100vmax var(--clip-bottom),
+		0 var(--clip-bottom),
+		var(--clip-edges) 100%,
+		var(--clip-further) var(--clip-further)
+	);
+}
+
+
+
+/* Range 2 */
+
+input[type="range"].range2 {
+	font-size: 1.5rem;
+  margin-top: 0.2em;
+	
+}
+
+input[type="range"].range2 {
+	color: #ef233c;
+	--thumb-height: 0.7em;
+	--track-height: 0.125em;
+	--track-color: rgb(137, 137, 137);
+	--brightness-hover: 180%;
+	--brightness-down: 80%;
+	--clip-edges: 0.125em;
+  --track-color: rgb(137, 137, 137);
+
+}
+
+
+/* === range commons === */
+input[type="range"].range2 {
+	position: relative;
+	background: rgb(137, 137, 137);
+
+  
+}
+
+
+/* === WebKit specific styles === */
+
+input[type="range"].range2::-webkit-slider-runnable-track{overflow: hidden;}
+input[type="range"].range2::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	transition: all ease 100ms;
+	height: var(--thumb-height);
+  
+}
+
+input[type="range"].range2::-webkit-slider-runnable-track,
+input[type="range"].range2::-webkit-slider-thumb {
+	position: relative;
+ 
+}
+
+input[type="range"].range2::-webkit-slider-thumb {
+	--thumb-radius: calc((var(--thumb-height) * 0.5) - 1px);
+	--clip-top: calc((var(--thumb-height) - var(--track-height)) * 0.5 - 0.5px);
+	--clip-bottom: calc(var(--thumb-height) - var(--clip-top));
+	--clip-further: calc(100% + 1px);
+	--box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0
+		100vmax currentColor;
+
+	width: var(--thumb-width, var(--thumb-height));
+	
+	background-color:white;
+  color: rgb(255, 255, 255);
+	box-shadow: var(--box-fill);
+	border-radius: var(--thumb-width, var(--thumb-height));
+
+	filter: brightness(100%);
+	clip-path: polygon(
+		100% -1px,
+		var(--clip-edges) -1px,
+		0 var(--clip-top),
+		-100vmax var(--clip-top),
+		-100vmax var(--clip-bottom),
+		0 var(--clip-bottom),
+		var(--clip-edges) 100%,
+		var(--clip-further) var(--clip-further)
+	);
 }
